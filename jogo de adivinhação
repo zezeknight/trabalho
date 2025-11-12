@@ -1,0 +1,27 @@
+#criando um jogo de adivinhação
+print("jogo da adivinha🤔")
+
+import random
+
+print ("adivinhe o número")
+print ("vamos começar")
+
+#randint é uma função para definir um numero aleatorio
+numero_secreto = random.randint (1,50)
+
+tentativas = 0
+
+#while true serva como executar o codigo python de forma indefinida
+while True:
+    palpite= int(input("de um palpite:"))
+    tentativas += 1
+    
+    if palpite == numero_secreto:
+        print(f"parabens, você acertou {tentativas} tentativas, parabens")
+        break
+    
+    elif palpite < numero_secreto:
+        print("tente um numero maior")
+    else:
+        print("tente um numero menor")
+    
